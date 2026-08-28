@@ -1,0 +1,3 @@
+# Fallback for Netlify deploys that ignore netlify.toml (e.g. drag-and-drop of dist/).
+/api/chat  /.netlify/functions/chat  200!
+/*         /index.html               200
