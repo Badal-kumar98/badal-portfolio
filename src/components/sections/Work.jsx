@@ -7,201 +7,141 @@ import { useMediaQuery } from "../../lib/hooks";
 const surface = (x, y, top, mid) =>
   `radial-gradient(120% 90% at ${x} ${y}, ${top} 0%, #eef1f7 58%), linear-gradient(135deg, ${mid}, #f6f7fa)`;
 
-// Complete projects with dedicated Enterprise CRMs & Client Platforms
+// All production projects
 const PROJECTS = [
-  // --- ENTERPRISE CRMs (PROTECTED B2B SYSTEMS) ---
   {
     index: "01",
     title: "MUNAFA CRM",
     url: "https://koncept-invoice.pages.dev",
-    category: "Enterprise SaaS CRM & GST Billing",
-    stack: "React · TypeScript · Node.js · Express · MongoDB · PayU",
+    category: "Multi-Tenant SaaS CRM & GST Billing",
+    stack: "React · TypeScript · Redux Toolkit · SheetJS",
     blurb:
-      "Architected a complete multi-tenant SaaS business suite with 10+ modules: leads, client lifecycle, suppliers, employees, products, tasks, documents, invoices, quotations, purchase orders and payment receipts. Tenant-aware routing and role-based UI gating let one codebase serve isolated tenant data, with GST invoice PDFs and SheetJS Excel export.",
+      "Architected complete multi-tenant SaaS business suite with 10+ operational modules: leads, client lifecycle, suppliers, employees, products, tasks, documents, invoices, quotations, purchase orders and payment receipts with dynamic GST invoice PDF generation and SheetJS Excel export.",
     meta: "Protected B2B CRM",
     tint: "#173f9c",
     surface: surface("28%", "24%", "#c6d4f0", "#dae3f4"),
     icon: "invoice",
-    isCRM: true,
   },
   {
     index: "02",
-    title: "SANSCRITI |CRM",
-    url: "https://sanscriti.pages.dev/login",
-    category: "EV Dealership Operations & Inventory CRM",
-    stack: "React · Node.js · Express · MongoDB · Tailwind",
-    blurb:
-      "Enterprise field operations CRM for electric commercial vehicles. Built field-technician job card flows, warranty verification by serial number, spare parts inventory reconciliation, and multi-tier dealer hierarchy tracking with role-based access control.",
-    meta: "Protected B2B CRM",
-    tint: "#16a34a",
-    surface: surface("82%", "34%", "#bbf7d0", "#dcfce7"),
-    icon: "beam",
-    isCRM: true,
-  },
-  {
-    index: "03",
-    title: "CRYSTALION |CRM",
-    url: "https://crystalionengineers.pages.dev/login",
-    category: "Industrial Quotation & AMC Renewal CRM",
-    stack: "React · TypeScript · Node.js · MongoDB",
-    blurb:
-      "B2B industrial engineering quotation engine automating complex BOM calculations, GST margin breakdowns, RFP tracking, and Annual Maintenance Contract (AMC) service renewal alerts.",
-    meta: "Protected B2B CRM",
-    tint: "#b45309",
-    surface: surface("30%", "76%", "#fde68a", "#fef3c7"),
-    icon: "estate",
-    isCRM: true,
-  },
-  {
-    index: "04",
-    title: "NEERAVI |CRM",
-    url: "https://neeravi-crm.pages.dev/",
-    category: "Lead Ingestion & Pipeline Operations CRM",
-    stack: "React · Node.js · Express · MongoDB · Redux",
-    blurb:
-      "Centralized client management system featuring automated inquiry ingestion, stage-wise deal progression pipeline, task delegation matrix, and Proforma Invoice (PI) generation.",
-    meta: "Protected B2B CRM",
-    tint: "#7c3aed",
-    surface: surface("25%", "25%", "#ddd6fe", "#ede9fe"),
-    icon: "calls",
-    isCRM: true,
-  },
-  {
-    index: "05",
-    title: "CASE|STACK",
-    url: "https://casestack.in/",
-    category: "Legal Case Diary & Hearing CRM",
-    stack: "React · TypeScript · Node.js · Express · MongoDB",
-    blurb:
-      "Comprehensive case management CRM for advocates and law firms tracking client records, court hearing stages, cause list notifications, and secure case document vault.",
-    meta: "Protected Legal CRM",
-    tint: "#be185d",
-    surface: surface("28%", "72%", "#fbcfe8", "#fce7f3"),
-    icon: "gavel",
-    isCRM: true,
-  },
-
-  // --- COMMERCIAL CLIENT PLATFORMS & E-COMMERCE ---
-  {
-    index: "06",
     title: "SUGAR|BLISS",
     url: "https://sugarbliss.com.co",
-    category: "Luxury Keepsakes & Gift Hampers E-Commerce",
+    category: "Luxury Keepsakes & Hampers E-Commerce",
     stack: "React · Redux Toolkit · Tailwind CSS · Vite",
     blurb:
-      "Engineered bespoke luxury gifting platform featuring an interactive polaroid surprise box and custom keepsake hamper builder, persistent cart, and Pan-India delivery slot serviceability checks.",
+      "Engineered bespoke luxury gifting e-commerce platform featuring an interactive polaroid surprise box and custom keepsake hamper builder, stateful Redux cart, and Pan-India delivery slot serviceability checks.",
     meta: "Live E-Commerce",
     tint: "#e11d48",
     surface: surface("25%", "20%", "#fed7aa", "#fecdd3"),
     icon: "basket",
   },
   {
-    index: "07",
+    index: "03",
     title: "DRIVORA",
     url: "https://drivora.co.in",
     category: "On-Demand & Monthly Driver Services",
-    stack: "React · TypeScript · Tailwind CSS · Google Maps API",
+    stack: "React · TypeScript · Tailwind · Google Maps",
     blurb:
-      "Built customer booking portal for on-demand and monthly verified drivers with service tier selection (City/Outstation/Daily), real-time distance and fare estimation, and driver onboarding pipelines.",
-    meta: "Live Mobility Portal",
+      "Customer booking portal for on-demand and monthly verified drivers with service tiers (City/Outstation/Daily), real-time distance and fare estimation, driver onboarding funnel, and booking notifications.",
+    meta: "Live Platform",
     tint: "#059669",
     surface: surface("78%", "14%", "#a7f3d0", "#d1fae5"),
-    icon: "calls",
+    icon: "beam",
   },
   {
-    index: "08",
-    title: "LEGAL|PAPERS",
+    index: "04",
+    title: "LEGAL |PAPERS",
     url: "https://www.legalpapersindia.in",
-    category: "Legal Tech & e-Stamp Portal",
-    stack: "React · TypeScript · jsPDF · REST APIs",
+    category: "LegalTech Drafting & Stamp Paper Portal",
+    stack: "React · TypeScript · jsPDF · Tailwind CSS",
     blurb:
-      "Customer portal for automated legal document drafting, affidavits, and online e-stamp paper fulfillment with step-by-step document questionnaires and live preview generation.",
+      "Customer portal for automated legal document drafting, affidavits, and online e-stamp paper fulfillment with dynamic questionnaires, client-side PDF preview via jsPDF, and order tracking.",
     meta: "Live LegalTech",
     tint: "#d97706",
-    surface: surface("30%", "76%", "#fde68a", "#fef3c7"),
+    surface: surface("20%", "30%", "#fde68a", "#fef3c7"),
     icon: "gavel",
   },
   {
-    index: "09",
+    index: "05",
     title: "SANSCRITI |ELECTRIC",
     url: "https://sanscritielectric.com",
-    category: "Commercial EV Mobility Portal",
-    stack: "React · Node.js · Express · MongoDB · Tailwind",
+    category: "EV Mobility Corporate Showcase",
+    stack: "React · Node.js · Express · MongoDB",
     blurb:
-      "Corporate web platform for commercial electric vehicles, showcasing EV lineup specifications, battery telemetry stats, total cost of ownership (TCO) calculator, and dealership inquiry workflows.",
-    meta: "Live EV Corporate",
+      "Commercial EV mobility corporate platform: vehicle lineup specifications, battery telemetry stats, total cost of ownership (TCO) calculator, and dealership partnership funnels.",
+    meta: "Live CleanTech",
     tint: "#16a34a",
     surface: surface("82%", "34%", "#bbf7d0", "#dcfce7"),
     icon: "beam",
   },
   {
-    index: "10",
+    index: "06",
     title: "ALGO|TIPP",
     url: "https://algotipp.com/",
     category: "Real-Time Consultation Platform",
-    stack: "React · WebSockets · Agora SDK · JWT · PayU",
+    stack: "React · WebSockets · Agora SDK · PayU",
     blurb:
-      "Real-time consultation platform for international client. Built the WebSocket chat layer and integrated the Agora SDK for live video and audio calls, with JWT-backed sessions and PayU wallet top-ups.",
-    meta: "Live Video/Audio Platform",
+      "Real-time consultation platform for international clients. Implemented Agora RTC SDK for 1-on-1 live video and audio sessions, real-time WebSocket chat layer, and PayU wallet top-ups.",
+    meta: "International client",
     tint: "#1e5bd6",
     surface: surface("22%", "18%", "#ccd9f2", "#dde5f5"),
     icon: "calls",
   },
   {
-    index: "11",
+    index: "07",
     title: "NEERAJ|BOOKS",
     url: "https://www.neerajbooks.com/",
-    category: "Pan-India Academic Bookstore",
-    stack: "React · Redux · PayU · REST APIs",
+    category: "High-Volume Academic Bookstore",
+    stack: "React · Redux Toolkit · PayU · REST APIs",
     blurb:
-      "High-volume academic bookstore serving buyers across India, with 10,000+ publications catalog, cart, checkout and in-browser PDF reader engine.",
+      "Academic bookstore serving buyers across India with 10,000+ publications catalog, cart, PayU checkout, real-time order tracking, and in-browser canvas PDF reader engine.",
     meta: "Live Bookstore",
     tint: "#3159b0",
     surface: surface("30%", "76%", "#d3dff3", "#e3eaf6"),
     icon: "book",
   },
   {
-    index: "12",
+    index: "08",
     title: "KITAB|STREET",
     url: "https://kitabstreet.com/",
     category: "Digital E-Book Marketplace",
     stack: "React · Redux Toolkit · Razorpay · Tailwind",
     blurb:
       "Multi-publisher digital bookstore with nested category routing, instant ebook search, Razorpay checkout, digital library reader, and seller listing management.",
-    meta: "Live E-Book Marketplace",
+    meta: "Live E-Book Store",
     tint: "#dc2626",
     surface: surface("20%", "20%", "#fecaca", "#fee2e2"),
     icon: "book",
   },
   {
-    index: "13",
+    index: "09",
     title: "TRICITY |ENGINEERS",
     url: "https://www.tricityengineers.in/",
-    category: "Sustainable Engineering & EPC Portal",
+    category: "Sustainable Engineering & EPC",
     stack: "React · TypeScript · Tailwind CSS · Vite",
     blurb:
-      "Modern corporate portal for sustainable engineering solutions. Features project milestone timelines, client testimonials, and customized RFP assessment submission flows.",
+      "Corporate portal for sustainable engineering solutions. Features project milestone timelines, client testimonials, and customized RFP assessment submission flows.",
     meta: "Live Industrial EPC",
     tint: "#65a30d",
     surface: surface("70%", "30%", "#d9f99d", "#ecfccb"),
     icon: "estate",
   },
   {
-    index: "14",
+    index: "10",
     title: "UNITED |HORECA",
     url: "https://unitedhoreca.com/",
     category: "Commercial Kitchen Engineering",
     stack: "React · TypeScript · Tailwind CSS · Vite",
     blurb:
-      "World-class commercial kitchen engineering solutions portal for hotels and restaurants with equipment catalog and instant RFQ quotation generation.",
+      "World-class commercial kitchen engineering solutions portal for hotels and restaurants with equipment catalog, quote basket, and instant RFQ quotation generation.",
     meta: "Live Hospitality Tech",
     tint: "#ea580c",
     surface: surface("35%", "35%", "#fed7aa", "#ffedd5"),
     icon: "crate",
   },
   {
-    index: "15",
-    title: "UNITED |INFRA POWER",
+    index: "11",
+    title: "UNITED |INFRA",
     url: "https://unitedinfrapower.in/",
     category: "Industrial Power & Infrastructure EPC",
     stack: "React · TypeScript · Tailwind CSS · Vite",
@@ -213,7 +153,20 @@ const PROJECTS = [
     icon: "beam",
   },
   {
-    index: "16",
+    index: "12",
+    title: "CASE|STACK",
+    url: "https://casestack.in/",
+    category: "Case Management & Hearing CRM",
+    stack: "React · Redux · Dashboard UI",
+    blurb:
+      "Smart case diary CRM for advocates and law firms that tracks hearing dates, client records, court schedules, and case documents in one centralized dashboard.",
+    meta: "Protected Legal CRM",
+    tint: "#2f5cb4",
+    surface: surface("20%", "30%", "#d6e0f4", "#e5ebf7"),
+    icon: "gavel",
+  },
+  {
+    index: "13",
     title: "PROCX",
     url: "https://procx.pages.dev/packaging-services/shop",
     category: "B2B Wooden Packaging Marketplace",
@@ -222,17 +175,17 @@ const PROJECTS = [
       "Marketplace for wooden packaging materials connecting suppliers with buyers pan-India, built around bulk enquiry and catalog workflows.",
     meta: "Live B2B Marketplace",
     tint: "#7c3aed",
-    surface: surface("26%", "82%", "#ddd6fe", "#ede9fe"),
+    surface: surface("70%", "72%", "#ccd8ee", "#dde4f2"),
     icon: "crate",
   },
   {
-    index: "17",
+    index: "14",
     title: "FRESKO",
     url: "https://fresko.in/",
-    category: "Hyperlocal Grocery Delivery",
+    category: "Hyperlocal Quick Commerce",
     stack: "React · Node.js · Tailwind CSS",
     blurb:
-      "Fast, localized grocery delivery web app featuring pin-code serviceability checks, category carousels and delivery time-slot selection.",
+      "Fast, localized grocery delivery web app featuring pin-code serviceability checks, category carousels, and delivery time-slot selection.",
     meta: "Live Quick-Commerce",
     tint: "#059669",
     surface: surface("74%", "18%", "#a7f3d0", "#d1fae5"),
@@ -241,108 +194,160 @@ const PROJECTS = [
 ];
 
 export default function Work() {
-  const root = useRef(null);
+  const section = useRef(null);
   const track = useRef(null);
-  const isDesktop = useMediaQuery("(min-width: 1024px)");
+  const isMobile = useMediaQuery("(max-width: 767px)");
 
   useGSAP(
     () => {
-      if (!isDesktop) return;
-      const el = root.current;
-      const tr = track.current;
-      if (!el || !tr) return;
-
-      const getScrollAmount = () => -(tr.scrollWidth - window.innerWidth + 96);
-
-      const tween = gsap.to(tr, {
-        x: getScrollAmount,
+      if (isMobile) return;
+      const el = track.current;
+      if (!el) return;
+      const totalScroll = el.scrollWidth - window.innerWidth;
+      const tween = gsap.to(el, {
+        x: -totalScroll,
         ease: "none",
         scrollTrigger: {
-          trigger: el,
-          start: "top top",
-          end: () => `+=${tr.scrollWidth - window.innerWidth}`,
+          trigger: section.current,
           pin: true,
           scrub: 1,
+          start: "top top",
+          end: () => `+=${totalScroll}`,
           invalidateOnRefresh: true,
         },
       });
 
+      // Progress bar at the bottom
+      const bar = section.current?.querySelector("[data-work-bar]");
+      if (bar) {
+        gsap.to(bar, {
+          scaleX: 1,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section.current,
+            scrub: 1,
+            start: "top top",
+            end: () => `+=${totalScroll}`,
+          },
+        });
+      }
+
       return () => {
-        tween.scrollTrigger?.kill();
         tween.kill();
       };
     },
-    { dependencies: [isDesktop], revertOnUpdate: true }
+    [isMobile]
   );
 
+  useGSAP(() => {
+    if (!isMobile) return;
+    const cards = section.current?.querySelectorAll("[data-work-card]");
+    cards?.forEach((card) => {
+      gsap.from(card, {
+        y: 48,
+        autoAlpha: 0,
+        duration: 1,
+        ease: "expo.out",
+        scrollTrigger: { trigger: card, start: "top 88%" },
+      });
+    });
+  }, [isMobile]);
+
   return (
-    <section
-      ref={root}
-      id="work"
-      className="relative bg-[var(--color-void)] py-[12vh] lg:py-0"
-    >
-      {/* section header */}
-      <div className="px-[var(--gutter)] pb-8 lg:absolute lg:left-0 lg:top-12 lg:z-20 lg:w-full lg:pb-0">
-        <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
-          <div>
-            <p className="label mb-3">
-              <span className="text-[var(--color-acid)]">[02]</span>
-              <br />
-              Production Work & Enterprise CRMs
-            </p>
-            <h2 className="text-h2 font-display leading-[0.92]">
-              Work that ships
-              <span className="text-[var(--color-acid)]">.</span>
-            </h2>
-          </div>
-          <p className="label max-w-[34ch] text-[var(--color-bone-dim)] md:text-right">
-            17 production systems · Enterprise CRMs & commercial platforms
+    <section id="work" ref={section} className="relative overflow-hidden bg-[var(--color-ink)]">
+      <div className="pointer-events-none z-20 flex items-start justify-between px-[var(--gutter)] pt-28 pb-6 md:absolute md:inset-x-0 md:top-0 md:pb-0 md:pt-28">
+        <p className="label">
+          <span className="text-[var(--color-acid)]">[02]</span>
+          <br />
+          Selected work
+        </p>
+        {!isMobile && (
+          <p className="label hidden text-right md:block">
+            Scroll to pan
             <br />
-            <span className="font-mono text-micro text-[var(--color-acid)]">
-              [ Protected B2B & Public Deployments ]
-            </span>
+            {PROJECTS.length} projects
           </p>
-        </div>
+        )}
       </div>
 
-      {/* Recruiter / Interviewer Note for CRMs */}
-      <div className="px-[var(--gutter)] pt-4 pb-8 lg:hidden">
-        <div className="rounded-xl border border-[var(--color-bone)]/20 bg-[var(--color-coal)] p-5 text-sm text-[var(--color-bone-dim)]">
-          <p className="font-mono text-xs uppercase tracking-wider text-[var(--color-acid)] mb-1 font-bold">
-            Notice for Technical Interviewers
-          </p>
-          <p className="leading-relaxed">
-            Enterprise CRMs (Munafa, Sanscriti, Crystalion, Neeravi, CaseStack) are internal operations platforms protected by Role-Based Access Control (RBAC). Architecture schemas and live walkthroughs are demonstrated during technical interviews.
-          </p>
-        </div>
-      </div>
-
-      {/* track container */}
-      <div className="lg:flex lg:h-[100svh] lg:items-center lg:overflow-hidden">
+      <div
+        ref={track}
+        className={
+          isMobile
+            ? "flex flex-col gap-12 px-[var(--gutter)] pb-24 pt-2"
+            : "flex h-[100svh] items-center gap-[6vw] px-[var(--gutter)] will-change-transform"
+        }
+        style={isMobile ? undefined : { width: "max-content" }}
+      >
+        {/* Intro plate */}
         <div
-          ref={track}
-          className="grid grid-cols-1 gap-6 px-[var(--gutter)] sm:grid-cols-2 lg:flex lg:flex-nowrap lg:gap-8 lg:px-[var(--gutter)] lg:pt-20"
+          className={`flex shrink-0 flex-col justify-end ${isMobile ? "w-full" : "h-[70vh] w-[60vw]"}`}
         >
-          {PROJECTS.map((project) => (
-            <ProjectCard key={project.index} project={project} />
-          ))}
+          <h2 className="text-h2 font-display leading-[0.9]">
+            Things I&rsquo;ve
+            <br />
+            <span className="font-serif font-normal italic text-[var(--color-acid)]">shipped</span>.
+          </h2>
+          <p className="mt-6 max-w-[36ch] text-body text-[var(--color-bone-dim)]">
+            Production client work across eCommerce, real-time media, mobility, legal, and engineering
+            — plus multi-tenant enterprise CRMs and full-stack MERN deployments.
+          </p>
+        </div>
+
+        {PROJECTS.map((p) => (
+          <Card key={p.index} project={p} stacked={isMobile} />
+        ))}
+
+        {/* End plate */}
+        <div
+          className={`flex shrink-0 flex-col justify-center ${isMobile ? "w-full py-6" : "h-[70vh] w-[42vw]"}`}
+        >
+          <p className="label mb-4">All {PROJECTS.length} shipped to production, from Figma handoff to launch</p>
+          <a
+            href="#contact"
+            data-cursor="view"
+            data-cursor-label="Say hi"
+            className="text-h3 font-display leading-none transition-colors hover:text-[var(--color-acid)]"
+          >
+            Let&rsquo;s
+            <br />
+            talk →
+          </a>
         </div>
       </div>
+
+      {!isMobile && (
+        <div className="absolute inset-x-[var(--gutter)] bottom-8 z-20 hidden h-px bg-[var(--color-bone)]/15 md:block">
+          <div data-work-bar className="h-full w-full origin-left scale-x-0 bg-[var(--color-acid)]" />
+        </div>
+      )}
     </section>
   );
 }
 
-function ProjectCard({ project }) {
+function Card({ project, stacked }) {
   const live = Boolean(project.url);
-  const Tag = live ? "a" : "div";
+  const Tag = live ? "a" : "article";
+  const linkProps = live
+    ? {
+        href: project.url,
+        target: "_blank",
+        rel: "noreferrer",
+        "aria-label": `${project.title.replace("|", "")} — open the live site in a new tab`,
+      }
+    : {};
 
   return (
     <Tag
-      href={project.url}
-      target={live ? "_blank" : undefined}
-      rel={live ? "noreferrer" : undefined}
-      data-cursor={live ? "view" : undefined}
-      className="group relative flex h-[520px] w-full flex-col justify-between overflow-hidden rounded-[3px] border edge text-[var(--color-bone)] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-[var(--color-acid)] sm:h-[560px] lg:h-[68vh] lg:w-[480px] lg:shrink-0"
+      {...linkProps}
+      data-work-card
+      data-cursor={live ? "view" : "hover"}
+      data-cursor-label={live ? "Visit" : undefined}
+      className={`group relative block shrink-0 overflow-hidden rounded-[2px] ${
+        live ? "cursor-pointer" : ""
+      } ${
+        stacked ? "h-auto min-h-[360px] sm:h-[56vh] sm:min-h-[420px] w-full" : "h-[70vh] w-[clamp(320px,44vw,600px)]"
+      }`}
       style={{ background: project.surface }}
     >
       <span
@@ -353,15 +358,7 @@ function ProjectCard({ project }) {
       <div className="absolute inset-0 flex flex-col justify-between p-8 md:p-10">
         <div className="flex items-start justify-between gap-4 font-mono text-label uppercase tracking-[0.16em] text-[var(--color-bone-dim)]">
           <span style={{ color: project.tint }}>{project.index}</span>
-          <span className="text-right">
-            {project.isCRM ? (
-              <span className="rounded bg-black/60 px-2 py-0.5 text-[9px] text-[#38bdf8] font-bold">
-                Protected CRM
-              </span>
-            ) : (
-              project.meta
-            )}
-          </span>
+          <span className="text-right">{project.meta}</span>
         </div>
 
         <div data-card-meta>
@@ -375,7 +372,11 @@ function ProjectCard({ project }) {
             <ProjectTitle title={project.title} />
           </h3>
           <p
-            className="mt-4 max-w-[42ch] text-body leading-snug text-[var(--color-bone-dim)]"
+            className={`mt-4 max-w-[42ch] text-body leading-snug text-[var(--color-bone-dim)] ${
+              stacked
+                ? ""
+                : "opacity-0 transition-opacity duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:opacity-100"
+            }`}
           >
             {project.blurb}
           </p>
@@ -391,7 +392,7 @@ function ProjectCard({ project }) {
               className="mt-5 inline-flex items-center gap-2 font-mono text-micro uppercase tracking-[0.16em]"
               style={{ color: project.tint }}
             >
-              {project.isCRM ? "Portal Login" : "Visit site"}
+              Visit site
               <span className="inline-block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1 group-hover:-translate-y-1">
                 ↗
               </span>
