@@ -1,116 +1,50 @@
-# Badal Kumar — Portfolio
+# Badal Kumar — Full Stack Developer (MERN) Portfolio
 
-Personal portfolio for **Badal Kumar**, React.js Frontend Developer based in Delhi NCR.
-Light, cinematic, scroll-driven, built for 60fps.
+Kinetic, scroll-driven personal developer portfolio for **Badal Kumar**, Full Stack Developer (MERN) based in Delhi NCR, India.
 
-**Sections:** Hero (WebGL) → Manifesto → Work (9 projects) → Stack → About (experience + education + stat counters) → Marquee → Contact.
+[![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-GitHub_Pages-22c55e?style=for-the-badge&logo=githubpages&logoColor=white)](https://badal-kumar98.github.io/badal-portfolio/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![GSAP](https://img.shields.io/badge/GSAP_3-88CE02?style=for-the-badge&logo=greensock&logoColor=white)](https://greensock.com/)
 
-## Stack
-
-React 19 · TypeScript · Vite 6 · Tailwind CSS 4 · GSAP 3 (ScrollTrigger) · Lenis · OGL (WebGL)
-
-## Getting started
-
-```bash
-npm install
-npm run dev      # http://localhost:5173
-npm run build    # tsc -b && vite build
-npm run preview
-```
-
-## Things you will want to change
-
-Everything personal lives in **`src/lib/site.js`** — name, role, email, phone, location, GitHub,
-LinkedIn, availability line. Change it there and it updates across the nav, mobile menu, hero,
-about and footer.
-
-The deployed domain is **not** in that file, because it is also baked into static files that never
-run through the bundler. If the domain changes, update it in all four places:
-
-| File | What to change |
-| --- | --- |
-| `src/lib/site.js` | `url` |
-| `index.html` | `<link rel="canonical">`, all `og:*` and `twitter:*` URLs, the JSON-LD `url` / `image` |
-| `public/sitemap.xml` | `<loc>` |
-| `public/robots.txt` | `Sitemap:` line |
-
-### Portrait
-
-`public/portrait.webp` (with a `.jpg` fallback) at 880×1100, 4:5. `HAS_PORTRAIT` is `true`
-in `src/lib/site.js`. To swap it, replace both files at the same 4:5 ratio — the figure is
-`aspect-[4/5]` with `object-cover`, so an off-ratio image gets cropped top and bottom.
-
-### Résumé
-
-The PDF lives at `public/Badal-Kumar-Resume.pdf` and is linked from three places via
-`RESUME_URL` in `src/lib/site.js`: the hero CTA row, a button under Education in About,
-and the "Elsewhere" column in the footer. Replace the file and all three update.
-
-Until then the About section shows the "BK" monogram. The monogram and the photo occupy the same
-box, so nothing shifts when you add one.
-
-### The AI assistant
-
-`api/chat.ts` is a Vercel Edge Function that answers questions about Badal, grounded **only** in the
-CV text embedded at the top of that file. It calls Groq's OpenAI-compatible API.
-
-- Set `GROQ_API_KEY` in the Vercel project's environment variables.
-- Without the key, the widget still renders and returns a polite "not configured yet, email me
-  instead" message. Nothing breaks.
-- To change what the assistant knows, edit the `PROFILE` string in `api/chat.ts`. It is the single
-  source of truth; the model is instructed not to go beyond it.
-
-If you would rather not ship the assistant at all: delete `src/components/Assistant.tsx` and
-`api/chat.ts`, and remove the `<Assistant />` line from `src/App.tsx`.
-
-## Notes for future edits
-
-- **Colour tokens live in `src/index.css`** under `@theme`. `--color-acid` is the blue accent and is
-  used *both* as accent text on dark backgrounds *and* as a fill with dark text on top (the footer
-  mail button, the Stack hover sweep). If you change it, check contrast in both directions — the
-  current value clears 7.2:1 either way.
-- **Project titles in `src/components/sections/Work.tsx`** may contain a `|`, which renders as a
-  `<wbr />`. That is a break *opportunity*, used so long compound names like `NEERAJ|BOOKS` break
-  between words instead of mid-syllable when a card is narrow.
-- **`stacked` in `Work.tsx`** is the single flag deciding horizontal-pinned vs vertical layout. It
-  also controls whether project blurbs are hover-revealed or always visible. Do not swap it for a
-  `md:` breakpoint class — 768px tablets match `md` but never fire hover, which hides the text.
-- **Animations are reduced-motion aware.** `useGSAP` skips motion entirely and runs a static
-  fallback; Lenis does not initialise; the WebGL hero is replaced by a CSS gradient.
-- **The WebGL hero uses OGL, not Three.js**, and is lazy-loaded, paused via IntersectionObserver
-  when off-screen, and skipped entirely on Data Saver connections.
-
+[Live Portfolio](https://badal-kumar98.github.io/badal-portfolio/) | [Direct Resume PDF](https://badal-kumar98.github.io/badal-portfolio/Badal-Kumar-Resume.pdf) | [LinkedIn](https://linkedin.com/in/badal-kumar-200b45324)
 
 ---
 
-## Assistant ("Ask my AI")
+## Architecture & Sections
 
-The panel answers from `shared/profile.js` — the CV text — via a topic matcher in
-`shared/answerer.js`. **It needs no server and no API key**, which is what makes it
-work on static hosting (Netlify Drop). Nothing is generated, so it cannot invent facts.
+- **Hero:** Interactive WebGL particle mesh (OGL), kinetic title reveals, and direct resume actions.
+- **Manifesto:** Core development philosophy focused on 95+ Google Lighthouse mobile performance.
+- **Featured Work:** Interactive project gallery covering 10+ live client deployments (Munafa CRM, Sugarbliss, Drivora, Legal Papers India, Sanscriti Electric, and more).
+- **Technical Stack:** Interactive filterable grid highlighting React, Node.js, TypeScript, Express, MongoDB, Redux Toolkit, and payment SDKs (Razorpay, PayU).
+- **About & Track Record:** Professional background, key achievements at Koncept Software Solutions, education, and live metric counters.
+- **Contact:** One-click email trigger, direct phone link, and social profiles.
 
-To change what it knows, edit `PROFILE` in `shared/profile.js` and the `TOPICS` array
-in `shared/answerer.js`.
+## Tech Stack
 
-### Optional: hosted model
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS v4
+- GSAP 3 (ScrollTrigger)
+- Lenis Smooth Scroll
+- OGL (WebGL)
 
-If you later deploy somewhere that runs serverless functions (Netlify **via Git**, or
-Vercel), the panel will prefer a hosted model and fall back to the local answerer only
-if it is unreachable.
+## Local Setup
 
-- Netlify via Git: `netlify.toml` rewrites `/api/chat` to `netlify/functions/chat.js`.
-- Vercel: `api/chat.js` runs as an edge function; `vercel.json` keeps `/api/*` out of
-  the SPA rewrite.
-- Either way, set `GROQ_API_KEY` in the host's environment variables.
+```bash
+git clone https://github.com/Badal-kumar98/badal-portfolio.git
+cd badal-portfolio
+npm install
+npm run dev
+```
 
-**Netlify Drop (drag-and-drop) does not run functions at all** — it only serves static
-files, so `/api/chat` will not exist and the local answerer handles everything. That is
-the expected, supported setup.
+## Author
 
-## Theme
-
-Light theme. All colour lives in the `@theme` block in `src/index.css`. Token names are
-historical — `void`/`ink`/`coal` are surfaces (lightest → light grey) and `bone` is the
-text ink. Changing those nine values reskins the whole site. Note that the WebGL hero
-(`src/components/hero/GravScene.jsx`) carries its own colours and blend mode, so it needs
-updating separately.
+**Badal Kumar**  
+Full Stack Developer (MERN)  
+Email: badalkumar4574@gmail.com  
+Phone: +91 98389 95780  
+Location: Delhi NCR, India  
+GitHub: [Badal-kumar98](https://github.com/Badal-kumar98)
