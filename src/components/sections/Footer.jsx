@@ -117,7 +117,7 @@ export default function Footer() {
 
       <div className="flex flex-col items-center justify-between gap-2 border-t edge pt-6 font-mono text-micro uppercase tracking-[0.16em] text-[var(--color-ash)] md:flex-row">
         <span>© {year} {SITE.name}</span>
-        <span>{SITE.roleLong}</span>
+        <span>Designed & Engineered end-to-end by Badal Kumar</span>
         <span>{SITE.locationLong}</span>
       </div>
     </footer>
