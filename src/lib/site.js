@@ -15,7 +15,7 @@ export const SITE = {
   email: "badalkumar4574@gmail.com",
   phone: "9838995780",
   phoneHref: "+919838995780",
-  url: "https://badal98-portfolio.netlify.app",
+  url: "https://badal-kumar98.github.io/badal-portfolio",
   github: "https://github.com/Badal-kumar98",
   linkedin: "https://www.linkedin.com/in/badal-kumar-200b45324/",
   availability: "Open to Full Stack / MERN / Frontend roles in Delhi NCR & Remote",
@@ -26,8 +26,9 @@ export const SITE = {
  */
 export const HAS_PORTRAIT = true;
 
-/** Résumé PDF — lives in /public so it is served as a static file. */
-export const RESUME_URL = "/Badal-Kumar-Resume.pdf";
+/** Résumé PDF and HTML — lives in /public so it is served as static files. */
+export const RESUME_URL = "./Badal-Kumar-Resume.pdf";
+export const RESUME_HTML_URL = "./badal_kumar_resume.html";
 
 export const NAV_LINKS = [
   ["Work", "#work"],

@@ -4,8 +4,8 @@ import { gsap } from "../../lib/smoothScroll";
 import { Reveal } from "../ui/Reveal";
 import { SITE, HAS_PORTRAIT, RESUME_URL } from "../../lib/site";
 
-const portraitJpg = "/portrait.jpg";
-const portraitWebp = "/portrait.webp";
+const portraitJpg = "./portrait.jpg";
+const portraitWebp = "./portrait.webp";
 
 // Updated from resume
 const STATS = [
