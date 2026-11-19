@@ -9,22 +9,22 @@ const portraitWebp = "/portrait.webp";
 
 // Updated from resume
 const STATS = [
-  { value: 10, suffix: "", label: "Live client sites" },
-  { value: 1.5, suffix: "", decimals: 1, label: "Years in production" },
-  { value: 7, suffix: "", label: "Industries shipped for" },
-  { value: 1, suffix: "", label: "International client" },
+  { value: 14, suffix: "+", label: "Live client deployments" },
+  { value: 1.5, suffix: "+", decimals: 1, label: "Years in production" },
+  { value: 4, suffix: "", label: "Enterprise CRMs built" },
+  { value: 95, suffix: "+", label: "Mobile Lighthouse scores" },
 ];
 
 // Updated highlights from resume
 const HIGHLIGHTS = [
-  "Ship React frontends for client web applications across eCommerce, CRM, healthcare, education, hospitality, real estate and B2B, working within a 4-person delivery team.",
-  "Improved Lighthouse mobile scores to 95+ on key pages through lazy loading, route-based code splitting, image optimisation and structured data.",
-  "Built WebSocket-based real-time chat and integrated the Agora SDK for video and audio consultation flows, with JWT-backed session handling.",
-  "Designed shared Redux Toolkit state for cart, checkout, multi-step forms and user sessions, and React Query for server-state caching and background refetching.",
-  "Converted Figma designs into a reusable component library — tables, modals, filters and form controls — reused across multiple client projects.",
-  "Integrated Razorpay and PayU checkout flows with backend signature verification, handling failure, retry and webhook-confirmation states.",
-  "Implemented JWT authentication with role-based access control, validating roles server-side from the token rather than trusting client state.",
-  "Own frontend debugging across live client deployments: DevTools profiling, network inspection, API contract validation and cross-browser QA.",
+  "Architect and ship full-stack web applications and multi-tenant enterprise CRMs across EV mobility, legal-tech, engineering, eCommerce, and logistics.",
+  "Engineer custom Node.js and Express RESTful APIs with normalized MongoDB schemas, Mongoose validation, indexing, and role-based access control (RBAC).",
+  "Design complex MongoDB aggregation pipelines for automated GST tax calculations, multi-filter reporting, and sales analytics.",
+  "Integrated Razorpay and PayU checkout flows with server-side HMAC SHA256 cryptographic signature verification, webhooks, and retry logic.",
+  "Built real-time bidirectional messaging via WebSockets and integrated Agora Web SDK for low-latency audio/video consultations.",
+  "Elevated mobile Lighthouse performance scores to 95+ through route-based code splitting, lazy loading, and asset minification.",
+  "Developed a shared UI component library (dynamic tables, modal controllers, multi-step forms) cutting engineering sprint cycles by 35%.",
+  "Manage production deployments across Cloudflare Pages, Netlify, and Vercel with automated CI/CD and zero-downtime rollouts.",
 ];
 
 function Counter({ value, suffix, decimals = 0 }) {

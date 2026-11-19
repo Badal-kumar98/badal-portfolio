@@ -1,14 +1,14 @@
 /**
  * Single source of truth for identity, contact details and links.
- * Updated from resume — Aug 2026.
+ * Updated to Full Stack Developer (MERN) — Nov 2026.
  */
 export const SITE = {
   name: "Badal Kumar",
   first: "BADAL",
   last: "Kumar",
   initials: "BK",
-  role: "React.js Frontend Developer",
-  roleLong: "React.js Frontend Developer — React, TypeScript, Redux Toolkit",
+  role: "Full Stack Developer (MERN)",
+  roleLong: "Full Stack Developer (MERN) — React, Node.js, TypeScript, Express, MongoDB",
   location: "Delhi NCR, India",
   locationLong: "Delhi · Noida · Gurugram",
   timeZone: "Asia/Kolkata",
@@ -18,7 +18,7 @@ export const SITE = {
   url: "https://badal98-portfolio.netlify.app",
   github: "https://github.com/Badal-kumar98",
   linkedin: "https://www.linkedin.com/in/badal-kumar-200b45324/",
-  availability: "Open to Frontend / React roles in Delhi NCR",
+  availability: "Open to Full Stack / MERN / Frontend roles in Delhi NCR & Remote",
 };
 
 /**

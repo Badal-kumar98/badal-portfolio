@@ -102,7 +102,7 @@ export default function Footer() {
         <div className="md:text-right">
           <p className="label mb-4">Now</p>
           <p className="text-body text-[var(--color-bone-dim)]">
-            Shipping client frontends at Koncept Software Solutions &mdash; and open to what&rsquo;s
+            Shipping full stack web platforms and enterprise CRMs at Koncept Software Solutions &mdash; and open to what&rsquo;s
             next.
           </p>
         </div>

@@ -81,10 +81,10 @@ export default function Hero() {
 
       {/* top meta row */}
       <div data-hero-fade className="relative z-10 flex items-start justify-between">
-        <p className="label max-w-[18ch] leading-relaxed">
-          React.js Developer
+        <p className="label max-w-[20ch] leading-relaxed">
+          Full Stack Developer (MERN)
           <br />
-          React / TypeScript / Redux
+          React / Node / Express / Mongo
         </p>
         {/* FIX #3: show location from sm breakpoint, not only md */}
         <p className="label hidden text-right sm:block">
@@ -109,7 +109,7 @@ export default function Hero() {
         />
         <h1 className="font-display text-mega leading-[0.82]">
           <span className="sr-only">
-            Badal Kumar — React.js Frontend Developer based in Delhi NCR, India
+            Badal Kumar — Full Stack Developer (MERN) based in Delhi NCR, India
           </span>
           <span data-hero-line className="line-mask" aria-hidden="true">
             <span className="inline-block will-change-transform">{SITE.first}</span>
@@ -123,11 +123,11 @@ export default function Hero() {
         </p>
         <p
           data-hero-fade
-          className="mt-7 max-w-[44ch] text-lead font-light text-[var(--color-bone-dim)]"
+          className="mt-7 max-w-[46ch] text-lead font-light text-[var(--color-bone-dim)]"
         >
-          I build interfaces that feel{" "}
+          I build full-stack web applications and enterprise CRMs that feel{" "}
           <span className="font-serif italic text-[var(--color-bone)]">weightless</span> — fast,
-          pixel-perfect React work shipped to production for clients in India and abroad.
+          resilient MERN systems shipped to production for clients in India and abroad.
         </p>
 
         <div

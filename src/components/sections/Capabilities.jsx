@@ -5,33 +5,33 @@ import { SplitReveal } from "../ui/Reveal";
 const CAPS = [
   {
     n: "01",
-    title: "Core",
-    tags: "React.js · JavaScript (ES6+) · TypeScript · Redux Toolkit · React Query (TanStack) · React Router · Context API · Custom Hooks · HTML5 · CSS3",
+    title: "Frontend Core",
+    tags: "React.js · Next.js · TypeScript · JavaScript (ES6+) · Redux Toolkit · React Query · React Router · Context API · Custom Hooks",
   },
   {
     n: "02",
-    title: "UI & Styling",
-    tags: "Tailwind CSS · Material UI · Ant Design · Bootstrap · SASS/SCSS · Framer Motion · Figma-to-React · Responsive Design",
+    title: "Backend & Database",
+    tags: "Node.js · Express.js · MongoDB · Mongoose · RESTful APIs · JWT Auth · Role-Based Access Control (RBAC) · Aggregation Pipelines",
   },
   {
     n: "03",
-    title: "Forms & Data",
-    tags: "React Hook Form · Yup · Axios · REST APIs · WebSockets · SheetJS / Excel export · PDF generation",
+    title: "UI & Design Systems",
+    tags: "Tailwind CSS · Material UI · Ant Design · Bootstrap · Framer Motion · Figma-to-Code · Responsive Design",
   },
   {
     n: "04",
-    title: "Performance",
-    tags: "Lighthouse auditing · Lazy loading · Route-based code splitting · Image optimisation · Structured data / SEO",
+    title: "Data & Enterprise Logic",
+    tags: "React Hook Form · Yup · Axios · Dynamic GST Invoice PDFs · SheetJS Excel Export · WebSockets (Socket.io)",
   },
   {
     n: "05",
-    title: "Backend",
-    tags: "Node.js · Express.js · MongoDB · Mongoose · JWT Auth · Role-Based Access Control",
+    title: "Performance & SEO",
+    tags: "95+ Mobile Lighthouse · Route-based Code Splitting · Lazy Loading · Database Indexing · Caching · Metadata SEO",
   },
   {
     n: "06",
-    title: "Integrations & Tools",
-    tags: "Razorpay · PayU · Agora (video/audio SDK) · Git · GitHub · GitHub Actions (CI/CD) · Postman · Vite · Netlify · Vercel · Chrome DevTools",
+    title: "Integrations & DevOps",
+    tags: "Razorpay · PayU · Agora Web SDK (Audio/Video) · Git & GitHub · GitHub Actions (CI/CD) · Postman · Vite · Netlify · Vercel",
   },
 ];
 
